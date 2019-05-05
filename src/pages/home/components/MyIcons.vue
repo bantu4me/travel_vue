@@ -22,67 +22,18 @@ export default {
   name: 'MyIcons',
   data () {
     return {
-      iconsList: [
-        {
-          id: 'a0001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0003',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0004',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0005',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0006',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0007',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0008',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a0009',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 'a00010',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        }
-      ],
       swiperOption: {
       }
     }
+  },
+  props: {
+    list: Array
   },
   computed: {
     // eslint-disable-next-line vue/return-in-computed-property
     pages () {
       const pages = []
-      this.iconsList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
