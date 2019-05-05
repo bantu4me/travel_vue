@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of weekendList"
+        v-for="item of list"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -22,29 +22,8 @@
 <script>
 export default {
   name: 'MyWeekend',
-  data () {
-    return {
-      weekendList: [
-        {
-          id: '1',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-          title: '极地海洋世界',
-          desc: '很多海洋动物'
-        },
-        {
-          id: '2',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-          title: '极地海洋世界',
-          desc: '很多海洋动物'
-        },
-        {
-          id: '3',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-          title: '极地海洋世界',
-          desc: '很多海洋动物'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

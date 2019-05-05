@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item" v-for="item in recommendList" :key="item.id">
+      <li class="item" v-for="item in list" :key="item.id">
         <img class="item-img"
              :src="item.imgUrl"/>
         <div class="item-info border-bottom">
@@ -18,32 +18,8 @@
 <script>
 export default {
   name: 'MyRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '1',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/1e/1e51b5ea32ee8033a3.water.jpg_200x200_7750aa0b.jpg',
-          title: '梵净山',
-          desc: '国家5A级风景名胜区'
-        }, {
-          id: '2',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/1e/1e51b5ea32ee8033a3.water.jpg_200x200_7750aa0b.jpg',
-          title: '梵净山',
-          desc: '国家5A级风景名胜区'
-        }, {
-          id: '3',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/1e/1e51b5ea32ee8033a3.water.jpg_200x200_7750aa0b.jpg',
-          title: '梵净山',
-          desc: '国家5A级风景名胜区'
-        }, {
-          id: '4',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/1e/1e51b5ea32ee8033a3.water.jpg_200x200_7750aa0b.jpg',
-          title: '梵净山',
-          desc: '国家5A级风景名胜区'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
