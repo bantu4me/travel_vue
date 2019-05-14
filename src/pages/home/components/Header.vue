@@ -7,10 +7,12 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/经典/游玩
     </div>
-    <div class="header-right">
-      城市
-      <span class="iconfont">&#xe64a;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        城市
+        <span class="iconfont">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -27,18 +29,23 @@ export default {
     line-height: .86rem
     background-color $bgColor
     color #fff
+
     .header-left
       width: .64rem
       float: left
+
       .back-icon
         text-align center
         font-size .4rem
+
     .header-right
       width: 1.24rem
       float: right
       text-align center
+      color #fff
+
     .header-input
-      flex:1
+      flex: 1
       background-color #fff
       color #ccc
       line-height: .64rem
