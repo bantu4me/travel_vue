@@ -2,8 +2,8 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :hotCities="hotCities" :cities="cities"></city-list>
-    <city-alpha-beta :cities="cities"></city-alpha-beta>
+    <city-list :hotCities="hotCities" :cities="cities" :letter="letter"></city-list>
+    <city-alpha-beta :cities="cities" @change="change"></city-alpha-beta>
   </div>
 </template>
 
@@ -25,10 +25,14 @@ export default {
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   methods: {
+    change (e) {
+      this.letter = e
+    },
     getCityInfoSucc (res) {
       res = res.data
       console.log(res)
